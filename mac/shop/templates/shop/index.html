@@ -20,6 +20,7 @@
         body .carousel-indicators li{
           background-color: blue;
         }
+
         body .carousel-indicators{
           bottom: -40px;
         }
@@ -62,6 +63,7 @@
         <div class="container carousel-inner no-padding ">
             <div class="carousel-item active">
                 {% for i in product %}
+
           <div class="col-xs-3 col-sm-3 col-md-3">
             <div class="card align-items-center" style="width: 18rem;">
               <img src='/media/{{i.image}}' class="card-img-top" alt="...">
@@ -85,6 +87,7 @@
     </div>
 
     </div>
+
     </div>
 
             <!-- left and right controls for the slide -->
@@ -143,9 +146,9 @@
             popStr = popStr + document.getElementById('name' + item).innerHTML.slice(0, 19) + "... Qty: " + cart[item][0] + '<br>';
             i = i+1;
         }
-        //popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-primary'  id ='checkout'>Checkout</button></a> <button class='btn btn-primary ' onclick='clearCart()' id ='clearCart'>Clear Cart</button>";
+
         popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-primary' id ='checkout'>Checkout</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>Clear Cart</button>     "
-        console.log(popStr);
+        //console.log(popStr);
         document.getElementById('popcart').setAttribute('data-content', popStr);
         $('#popcart').popover('show');
     }

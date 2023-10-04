@@ -9,8 +9,8 @@
         <img src="/media/{{product.image}}" width="233px" height="385px">
     </div>
         <div class="row">
-           <button class="btn btn-primary mx-3">Buy Now</button>
-            <button  class="btn btn-primary">Add To Cart</button>
+            <!--<a href='/shop/checkout'><button class="btn btn-primary mx-3">Buy Now</button></a>
+            <button  class="btn btn-primary ">Add To Cart</button>-->
 
         </div>
 
@@ -20,6 +20,13 @@
         <h5>{{product.product_name}}</h5>
         <p><b>Rs.{{product.price}}</b></p>
          <p>{{product.desc}}</p>
+        <h6>Compare the cost from another online shopping shops:</h6>
+         <li><a href="https://www.amazon.in/">Amazon</a></li>
+        <li><a href="https://www.flipkart.com/">Flipkart</a></li>
+        <li><a href="https://www.myntra.com/">Myntra</a></li>
+        <li><a href="https://www.ajio.com/">AJIO</a></li>
+        <br></br>
+        <a href='/shop/checkout'><button class="btn btn-primary " style="width: 120px; height: 50px;" >Buy Now</button></a>
 
 
 
@@ -66,5 +73,10 @@
     });
      $('#popcart').popover();
     document.getElementById("popcart").setAttribute('data-content', '<h5>Cart for your items in my shopping cart</h5>');
+
+
+
+
+
 </script>
 {% endblock %}

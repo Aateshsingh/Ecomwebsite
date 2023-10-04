@@ -122,6 +122,7 @@ def checkout(request):
         }
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
         return render(request, 'shop/paytm.html', {'param_dict': param_dict})
+
     return render(request, 'shop/checkout.html')
 
 @csrf_exempt
